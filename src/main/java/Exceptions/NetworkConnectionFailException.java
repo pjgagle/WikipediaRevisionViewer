@@ -1,5 +1,5 @@
 package Exceptions;
 
-public class NetworkConnectionFailException {
+public class NetworkConnectionFailException extends Throwable{
 
 }

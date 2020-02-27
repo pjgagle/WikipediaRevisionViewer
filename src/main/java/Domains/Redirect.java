@@ -1,0 +1,19 @@
+package Domains;
+
+public class Redirect {
+    private String from;
+    private String to;
+
+    public Redirect(String theFrom, String theTo) {
+        from = theFrom;
+        to = theTo;
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+}

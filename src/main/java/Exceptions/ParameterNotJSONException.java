@@ -1,4 +1,4 @@
 package Exceptions;
 
-public class ParameterNotJSONException {
+public class ParameterNotJSONException extends Throwable {
 }
