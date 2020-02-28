@@ -1,7 +1,5 @@
 package Domains;
 
-import java.util.List;
-
 public class WikipediaPage {
     private String pgTitle;
     private int pgId;
