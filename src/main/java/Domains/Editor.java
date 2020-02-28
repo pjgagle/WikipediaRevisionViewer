@@ -6,40 +6,35 @@ import java.util.Date;
 
 public class Editor {
     private String user;
-    private Date timeStamp;
-    private int numberEdits;
+    private String timestamp;
 
-    public Editor(String theUser, String theTimeStamp) throws ParseException {
-        user = theUser;
-        timeStamp = parseDate(theTimeStamp);
-
-    }
-    public Date parseDate(String theDate) throws ParseException {
-        SimpleDateFormat newDate = new SimpleDateFormat("yyyy-M-ddThh:mm:ssZ");
-        String dateString = theDate;
-        Date date = newDate.parse(dateString);
-        return date;
+    public Editor(String user, String time) throws ParseException {
+        this.user = user;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        this.timestamp = String.valueOf(simpleDateFormat.parse(time));
     }
 
     public String getUser() {
         return user;
     }
 
-    public Date getTimeStamp() {
-        return timeStamp;
+    public String getTimestamp() {
+        return timestamp;
     }
 
-    public int getNumberEdits() {
-        return numberEdits;
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    public void setNumberEdits(int numberEdits) {
-        this.numberEdits = numberEdits;
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
     }
+
     @Override
     public String toString() {
-        return "Editor{" + "user='" +
-                '\'' + ", timestamp=" + timeStamp +
+        return "Editor {" +
+                "Username: " + user + '\'' +
+                "Timestamp: " + timestamp + '\'' +
                 '}';
     }
 }

@@ -38,6 +38,22 @@ public class WikipediaPage {
         return redirect;
     }
 
+    public void setPgTitle(String pgTitle) {
+        this.pgTitle = pgTitle;
+    }
+
+    public void setPgId(int pgId) {
+        this.pgId = pgId;
+    }
+
+    public void setPgEditors(List<Editor> pgEditors) {
+        this.pgEditors = pgEditors;
+    }
+
+    public void setRedirect(Redirect redirect) {
+        this.redirect = redirect;
+    }
+
     @Override
     public String toString(){
         return "WikipediaPage{" + "pageTitle='" + pgTitle +
