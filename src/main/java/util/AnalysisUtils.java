@@ -1,6 +1,7 @@
 package util;
 
 import Domains.Editor;
+import Domains.WikipediaPage;
 import Exceptions.NoWikiPageFoundException;
 
 import java.util.HashMap;
@@ -11,7 +12,7 @@ public class AnalysisUtils {
     public static void AnalyzeEdits(Editor[] editors) throws NoWikiPageFoundException {
 
     }
-    public static Editor mostFrequentEdit(Editor[] editors) {
+    public static Editor mostFrequentEdit(WikipediaPage editors) {
         HashMap<Editor, Integer> editorsCountMap = new HashMap<>();
         for (Editor edit : editors){
             if (editorsCountMap.containsKey(edit)){

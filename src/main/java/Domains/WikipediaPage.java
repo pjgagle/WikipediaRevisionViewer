@@ -5,32 +5,31 @@ import java.util.List;
 public class WikipediaPage {
     private String pgTitle;
     private int pgId;
-    private List<Editor> pgEditors;
+    private Editor[] pgEditors;
     private Redirect redirect;
 
-    public WikipediaPage(String thePgTitle, int thePgId, List<Editor> theEditorList) {
-        pgTitle = thePgTitle;
-        pgId = thePgId;
-        pgEditors = theEditorList;
-
-    }
-    public WikipediaPage(String thePgTitle, int thePgId, List<Editor> theEditorList, Redirect theRedirect) {
-        pgTitle = thePgTitle;
-        pgId = thePgId;
-        pgEditors = theEditorList;
-        redirect = theRedirect;
-
+    public WikipediaPage(String pageTitle, int pageId, Editor[] pageEditors) {
+        this.pgTitle = pageTitle;
+        this.pgId = pageId;
+        this.pgEditors = pageEditors;
     }
 
-    public String getPgTitle() {
+    public WikipediaPage(String pageTitle, int pageId, Editor[] pageEditors, Redirect redirect) {
+        this.pgTitle = pageTitle;
+        this.pgId = pageId;
+        this.pgEditors = pageEditors;
+        this.redirect = redirect;
+    }
+
+    public String getPageTitle() {
         return pgTitle;
     }
 
-    public int getPgId() {
+    public int getPageId() {
         return pgId;
     }
 
-    public List<Editor> getPgEditors() {
+    public Editor[] getPageEditors() {
         return pgEditors;
     }
 
@@ -38,26 +37,14 @@ public class WikipediaPage {
         return redirect;
     }
 
-    public void setPgTitle(String pgTitle) {
-        this.pgTitle = pgTitle;
-    }
-
-    public void setPgId(int pgId) {
-        this.pgId = pgId;
-    }
-
-    public void setPgEditors(List<Editor> pgEditors) {
-        this.pgEditors = pgEditors;
-    }
-
-    public void setRedirect(Redirect redirect) {
-        this.redirect = redirect;
-    }
-
     @Override
-    public String toString(){
-        return "WikipediaPage{" + "pageTitle='" + pgTitle +
-                '\'' + ", pageID=" + pgId + ", pageEditors=" +
-                pgEditors + ", redirect=" + redirect + '}';
+    public String toString() {
+        return "WikiPage{" +
+                ", pageTitle=" + pgTitle + '\'' +
+                ", pageId=" + pgId + '\'' +
+                ", pageEditors=" + pgEditors + '\'' +
+                ", redirect=" + redirect + '}';
     }
+
 }
+
